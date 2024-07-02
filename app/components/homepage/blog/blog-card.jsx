@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 function BlogCard({ blog }) {
-  console.log(blog);
   const imgSrc = blog.content.match(/<img[^>]+src="([^">]+)"/)[1];
   return (
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group">
