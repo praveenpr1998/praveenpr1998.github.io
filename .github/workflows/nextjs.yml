@@ -90,13 +90,13 @@ jobs:
     steps:
       - name: Set up environment variables
         run: |
-          echo "NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}" >> .env.local
-          echo "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}" >> .env.local
-          echo "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}" >> .env.local
-          echo "NEXT_PUBLIC_GTM=${{ secrets.NEXT_PUBLIC_GTM }}" >> .env.local
-          echo "NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}" >> .env.local
-          echo "NEXT_PUBLIC_RECAPTCHA_SECRET_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY }}" >> .env.local
-          echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}" >> .env.local
+          echo "NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}" >> .env.production
+          echo "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}" >> .env.production
+          echo "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}" >> .env.production
+          echo "NEXT_PUBLIC_GTM=${{ secrets.NEXT_PUBLIC_GTM }}" >> .env.production
+          echo "NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}" >> .env.production
+          echo "NEXT_PUBLIC_RECAPTCHA_SECRET_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY }}" >> .env.production
+          echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}" >> .env.production
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
