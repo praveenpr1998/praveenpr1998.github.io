@@ -25,7 +25,7 @@ async function getData() {
 
 export default async function Home() {
   const blogs = await getData();
-  console.log(process.env);
+  console.log('test');
   return (
     <>
       <HeroSection />
@@ -34,7 +34,7 @@ export default async function Home() {
       <Skills />
       <Projects />
       <Education />
-      // <Blog blogs={blogs} />
+      <Blog blogs={blogs} />
       <ContactSection />
     </>
   );
