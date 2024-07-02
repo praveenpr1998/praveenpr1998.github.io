@@ -7,6 +7,7 @@ import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
 
 function ContactWithoutCaptcha() {
+  console.log('test',process.env);
   const [error, setError] = useState({ email: false, required: false });
   const [userInput, setUserInput] = useState({
     name: '',
