@@ -6,6 +6,7 @@ export const skillsData = [
   "React Native",
   "React JS",
   "Tailwind",
+  "NestJS",
   "Git",
   "Figma",
   "Firebase",
