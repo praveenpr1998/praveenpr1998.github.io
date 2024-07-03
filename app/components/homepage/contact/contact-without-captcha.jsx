@@ -33,7 +33,7 @@ function ContactWithoutCaptcha() {
     };
 
    const serviceID = "service_a7fbz0r";
-    const templateID = "service_a7fbz0r";
+    const templateID = "template_hirbaeh";
     const options = { publicKey: "MgFfaTVcrOgmkTLdW" };
 
     try {
