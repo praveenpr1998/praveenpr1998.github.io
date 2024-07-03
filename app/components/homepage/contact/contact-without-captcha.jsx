@@ -37,7 +37,7 @@ function ContactWithoutCaptcha() {
     const options = { publicKey: "MgFfaTVcrOgmkTLdW" };
 
     try {
-      const res = await emailjs.send(serviceID, templateID, userInput, options);
+      const res = await emailjs.send(serviceID, templateID, input, options);
       const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
 
       if (res.status === 200 || teleRes.status === 200) {
