@@ -42,9 +42,9 @@ function ContactWithCaptcha() {
       setError({ ...error, required: false });
     }
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+    const serviceID = "service_a7fbz0r";
+    const templateID = "service_a7fbz0r";
+    const options = { publicKey: "MgFfaTVcrOgmkTLdW" };
     try {
       const res = await emailjs.send(serviceID, templateID, userInput, options);
       //   const teleRes = await axios.post(
@@ -125,7 +125,7 @@ function ContactWithCaptcha() {
             />
           </div>
           <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            sitekey={"6Lfm0wUqAAAAADxr1ZD3t30CKY9qZ2igGwwAvh03"}
             onChange={(code) => setCaptcha(code)}
           />
           <div className="flex flex-col items-center gap-2">
