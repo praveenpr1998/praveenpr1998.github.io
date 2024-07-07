@@ -7,9 +7,11 @@ import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import ExperienceModel from "../../../models/experience";
 import experience from "/public/lottie/code.json";
+import mongoose from "mongoose";
 
 async function Experience() {
-  const experiences = await ExperienceModel.find();
+  const experiences =
+    mongoose.connection.readyState === 1 ? await ExperienceModel.find() : null;
   const expList =
     Array.isArray(experiences) && experiences.length ? experiences : EXP_MOCK;
   return (

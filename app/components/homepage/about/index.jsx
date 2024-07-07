@@ -3,9 +3,11 @@
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import SummaryModel from "../../../models/summary";
+import mongoose from "mongoose";
 
 async function AboutSection() {
-  const summary = await SummaryModel.find();
+  const summary =
+    mongoose.connection.readyState === 1 ? await SummaryModel.find() : null;
   const summaryData =
     Array.isArray(summary) && summary.length
       ? summary[0].summary
