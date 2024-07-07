@@ -10,6 +10,7 @@ import experience from "/public/lottie/code.json";
 import mongoose from "mongoose";
 
 async function Experience() {
+  console.log(mongoose.connection.readyState);
   const experiences =
     mongoose.connection.readyState === 1 ? await ExperienceModel.find() : null;
   const expList =
