@@ -20,6 +20,6 @@ module.exports = {
     ],
   },
   experimental: {
-    instrumentationHook: true,
+    instrumentationHook: false,
   },
 };
