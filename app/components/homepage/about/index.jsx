@@ -2,8 +2,14 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
+import SummaryModel from "../../../models/summary";
 
-function AboutSection() {
+async function AboutSection() {
+  const summary = await SummaryModel.find();
+  const summaryData =
+    Array.isArray(summary) && summary.length
+      ? summary[0].summary
+      : personalData.description;
   return (
     <div id="about" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
@@ -17,9 +23,7 @@ function AboutSection() {
           <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
             Who I am?
           </p>
-          <p className="text-gray-200 text-sm lg:text-lg">
-            {personalData.description}
-          </p>
+          <p className="text-gray-200 text-sm lg:text-lg">{summaryData}</p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
           <Image

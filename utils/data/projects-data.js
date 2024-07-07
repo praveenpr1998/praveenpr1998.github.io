@@ -21,6 +21,24 @@ export const projectsData = [
     demo: "",
     image: crefin,
   },
+  {
+    id: 2,
+    name: "My Portfolio Site",
+    description:
+      "This project is my personal portfolio site, built using Next.js for a seamless and efficient web experience. It leverages MongoDB to dynamically fetch and display data, ensuring the content is always up-to-date. The styling is powered by Tailwind CSS, providing a modern and responsive design. Email functionality is integrated using EmailJS, with added Google reCAPTCHA to ensure security against spam. Google Analytics is included to track visitor metrics and gain insights into user interactions",
+    tools: [
+      "Next JS",
+      "MonogDB",
+      "Tailwind CSS",
+      "EmailJS",
+      "Google Analytics",
+      "Google reCAPTCHA",
+    ],
+    role: "Web Developer",
+    code: "",
+    demo: "",
+    image: crefin,
+  },
 ];
 
 // Do not remove any property.
