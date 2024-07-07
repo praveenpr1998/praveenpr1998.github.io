@@ -3,7 +3,7 @@ export const personalData = {
   profile: "/profile.jpg",
   designation: "Frontend Developer",
   description:
-    "My name is PRAVEEN RAJ. I am a innovative front-end developer with 4.5 years experience building and maintaining web and mobile applications in the recruiting industry, known for strategic thinking problem-solving skills .Eager to learn new libraries ,frameworks and tackle more complex problems and continue to find ways to maximize user efficiency.",
+    "My name is PRAVEEN RAJ. I am a innovative front-end developer with around 5 years experience building and maintaining web and mobile applications in the recruiting industry, known for strategic thinking problem-solving skills .Eager to learn new libraries ,frameworks and tackle more complex problems and continue to find ways to maximize user efficiency.",
   email: "praveenpr1998@gmail.com",
   phone: "+919626796998",
   address: "Lalitham Apartments, Perungudi, Chennai",
