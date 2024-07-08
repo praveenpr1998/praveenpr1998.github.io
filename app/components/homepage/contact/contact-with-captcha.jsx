@@ -3,11 +3,12 @@
 import { isValidEmail } from "@/utils/check-email";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
-
+import { analytics } from "../../../lib/firebase";
+import { logEvent } from "firebase/analytics";
 function ContactWithCaptcha() {
   const [input, setInput] = useState({
     name: "",
@@ -19,6 +20,12 @@ function ContactWithCaptcha() {
     email: false,
     required: false,
   });
+
+  useEffect(() => {
+    if (analytics) {
+      logEvent(analytics, "page_view", { page_path: window.location.pathname });
+    }
+  }, []);
 
   const checkRequired = () => {
     if (input.email && input.message && input.name) {
