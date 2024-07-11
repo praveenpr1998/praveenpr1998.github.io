@@ -14,7 +14,7 @@ async function HeroSection() {
 
     const resumeData = await ResumeModel.find();
   const resumeLink =
-    Array.isArray(resumeData) && resumeData.length
+    Array.isArray(resumeData) && resumeData.length && resumeData[0].driveLink
       ? resumeData[0].driveLink
       : personalData.resume;
   
