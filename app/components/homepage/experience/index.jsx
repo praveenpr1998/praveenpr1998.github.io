@@ -87,4 +87,6 @@ async function Experience() {
   );
 }
 
+export const dynamic = 'force-dynamic';
+
 export default Experience;
