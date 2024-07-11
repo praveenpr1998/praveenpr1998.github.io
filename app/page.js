@@ -11,7 +11,7 @@ import dbConnect from "./lib/dbConnect";
 async function getData() {
   const res = await fetch(
     `https://v1.nocodeapi.com/${personalData.devUsername}`,
-    { cache: "no-store" }
+    { cache: "no-cache" }
   );
 
   if (!res.ok) {
