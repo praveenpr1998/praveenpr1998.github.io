@@ -10,7 +10,8 @@ import Skills from "./components/homepage/skills";
 import dbConnect from "./lib/dbConnect";
 async function getData() {
   const res = await fetch(
-    `https://v1.nocodeapi.com/${personalData.devUsername}`,    { cache: "no-store" }
+    `https://v1.nocodeapi.com/${personalData.devUsername}`,
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
