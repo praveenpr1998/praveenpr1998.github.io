@@ -31,6 +31,16 @@ function Footer() {
               </Link>
             </div>
           </p>
+                    <p className="text-sm flex items-center justify-center">
+            Inspired from{" "}
+            <Link
+              target="_blank"
+              href="https://codewithmosh.com/"
+              className="text-[#16f2c3] mx-1"
+            >
+              codewithmosh.com
+            </Link>
+          </p>
         </div>
       </div>
     </div>
