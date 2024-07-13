@@ -1,6 +1,7 @@
 // @flow strict
 
 import * as React from 'react';
+import Link from "next/link";
 
 function ProjectCard({ project }) {
 
@@ -56,6 +57,19 @@ function ProjectCard({ project }) {
             <span className="text-orange-400">{project.role}</span>
             <span className="text-gray-400">,</span>
           </div>
+
+                 {project?.link ? (
+            <div>
+              <span className="ml-4 lg:ml-8 mr-2 text-white">link:</span>
+              <Link target="_blank" href={project.link}>
+                <span className="my-2 lg:my-3 text-orange-400 cursor-pointer underline hover:text-violet-500">
+                  {project.link}
+                </span>
+              </Link>
+              <span className="text-gray-400">,</span>
+            </div>
+          ) : null}
+          
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">Description:</span>
             <span className="text-cyan-400">{' ' + project.description}</span>
