@@ -8,6 +8,7 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import { FaMedium } from "react-icons/fa6";
 import ResumeModel from "../../../models/resume";
 
 async function HeroSection() {
@@ -64,6 +65,14 @@ async function HeroSection() {
               <BsLinkedin size={30} />
             </Link>
 
+                <Link
+              href={personalData.medium}
+              target="_blank"
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <FaMedium size={30} />
+            </Link>
+              
             <Link
               href={personalData.leetcode}
               target="_blank"
