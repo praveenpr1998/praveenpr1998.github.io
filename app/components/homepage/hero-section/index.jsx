@@ -1,6 +1,6 @@
 // @flow strict
 
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "../../../../utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -10,15 +10,24 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 import { FaMedium } from "react-icons/fa6";
 import ResumeModel from "../../../models/resume";
-
+import { Meteors } from "../ui/Meteors/index";
+import { TypewriterEffectSmooth } from "../ui/TypeWriterEffect/index";
 async function HeroSection() {
-
-    const resumeData = await ResumeModel.find();
+  const resumeData = await ResumeModel.find();
   const resumeLink =
     Array.isArray(resumeData) && resumeData.length && resumeData[0].driveLink
       ? resumeData[0].driveLink
       : personalData.resume;
-  
+
+  const words = [
+    {
+      text: "Praveen",
+    },
+    {
+      text: "Raj",
+    },
+  ];
+
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
@@ -33,8 +42,9 @@ async function HeroSection() {
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
-            This is{" "}
-            <span className=" text-pink-500">{personalData.name},</span>
+            <span className="flex">
+              This is <TypewriterEffectSmooth words={words} />
+            </span>
             <span className="flex flex-wrap">
               {`I'm a Meta `}{" "}
               <Image
@@ -65,14 +75,14 @@ async function HeroSection() {
               <BsLinkedin size={30} />
             </Link>
 
-                <Link
+            <Link
               href={personalData.medium}
               target="_blank"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <FaMedium size={30} />
             </Link>
-              
+
             <Link
               href={personalData.leetcode}
               target="_blank"
@@ -211,6 +221,7 @@ async function HeroSection() {
               <div>
                 <span className="text-gray-400">{`};`}</span>
               </div>
+              <Meteors number={20} />
             </code>
           </div>
         </div>

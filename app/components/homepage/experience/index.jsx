@@ -1,6 +1,6 @@
 // @flow strict
 
-import { experiences as EXP_MOCK } from "@/utils/data/experience";
+import { experiences as EXP_MOCK } from "../../../../utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
@@ -87,6 +87,6 @@ async function Experience() {
   );
 }
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default Experience;

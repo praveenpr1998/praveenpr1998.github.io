@@ -1,8 +1,5 @@
 // @flow strict
 import Link from "next/link";
-import Image from "next/image";
-import { skillsImage } from "@/utils/skill-image";
-
 function Footer() {
   return (
     <div className="relative border-t bg-[#0d1224] border-[#353951] text-white">
@@ -21,6 +18,14 @@ function Footer() {
               >
                 Next.js
               </Link>
+              <p className="mr-2">,</p>
+              <Link
+                target="_blank"
+                href="https://ui.aceternity.com/"
+                className="text-[#16f2c3]"
+              >
+                Aceternity UI
+              </Link>
               <p className="mx-2"> and </p>
               <Link
                 target="_blank"
@@ -31,7 +36,7 @@ function Footer() {
               </Link>
             </div>
           </p>
-                    <p className="text-sm flex items-center justify-center">
+          <p className="text-sm flex items-center justify-center">
             Inspired from{" "}
             <Link
               target="_blank"
