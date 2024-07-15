@@ -151,16 +151,20 @@ async function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Javascript</span>
                 <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Typescript</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Tailwind CSS</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Nest JS</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Firebase</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Splunk</span>
+                <span className="text-gray-400">{"'],"}</span>
                 <span className="text-amber-300">HTML</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">CSS</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Nest JS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Tailwind Css</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Splunk</span>
-                <span className="text-gray-400">{"'],"}</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">
