@@ -25,9 +25,9 @@ function Navbar() {
               {/* Core component */}
               <SparklesCore
                 background="transparent"
-                minSize={0.4}
+                minSize={0.6}
                 maxSize={1}
-                particleDensity={1200}
+                particleDensity={1600}
                 className="w-full h-full"
                 particleColor="#FFFFFF"
               />
