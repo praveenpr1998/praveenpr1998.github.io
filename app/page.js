@@ -7,6 +7,7 @@ import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
+import { NewsCards } from "./components/homepage/news";
 import dbConnect from "./lib/dbConnect";
 async function getData() {
   const res = await fetch(
@@ -23,9 +24,23 @@ async function getData() {
   return filtered;
 }
 
+async function getNews() {
+  const res = await fetch(
+    `https://newsapi.org/v2/top-headlines?country=in&apiKey=0e4532808942411185656d3d5a35ae0a`
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data.");
+  }
+
+  const data = await res.json();
+  return Array.isArray(data?.articles) ? data.articles : [];
+}
+
 export default async function Home() {
   await dbConnect();
   const blogs = await getData();
+  const news = await getNews();
   return (
     <>
       <HeroSection />
@@ -35,6 +50,7 @@ export default async function Home() {
       <Projects />
       <Education />
       <Blog blogs={blogs} />
+      <NewsCards news={news} />
       <ContactSection />
     </>
   );
