@@ -38,8 +38,11 @@ module.exports = {
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        moveUp: "moveUp 1s forwards",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        shrinkHeight: "shrinkHeight 2.5s ease-in-out forwards",
+        fadeOut: "fadeOut 1.8s ease-in-out forwards",
       },
       keyframes: {
         meteor: {
@@ -54,6 +57,14 @@ module.exports = {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
           },
+        },
+        shrinkHeight: {
+          "0%": { height: "100vh" },
+          "100%": { height: "0" },
+        },
+        fadeOut: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
         },
       },
     },
