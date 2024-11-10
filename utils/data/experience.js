@@ -1,9 +1,15 @@
 export const experiences = [
+   {
+    id: 0,
+    title: "Senior Software Engineer 2",
+    company: "Makemytrip",
+    duration: "(Nov 2024 - Present)",
+  },
   {
     id: 1,
     title: "Software Engineer 3",
     company: "Walmart Global Tech",
-    duration: "(Jan 2022 - Present)",
+    duration: "Jan 2022 - Oct 2024",
   },
   {
     id: 2,
