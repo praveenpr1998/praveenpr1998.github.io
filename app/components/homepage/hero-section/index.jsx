@@ -147,6 +147,8 @@ async function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">React Native</span>
                 <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Next JS</span>
+                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Redux/Redux Saga</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Javascript</span>
