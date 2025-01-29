@@ -16,6 +16,7 @@ if (!cached) {
 }
 
 async function dbConnect() {
+  try{
   if (cached.conn) {
     return cached.conn;
   }
@@ -32,10 +33,14 @@ async function dbConnect() {
     cached.conn = await cached.promise;
   } catch (e) {
     cached.promise = null;
-    throw e;
+    return null;
   }
 
   return cached.conn;
+  }
+  catch(e){
+return null;
+  }
 }
 
 export default dbConnect;
