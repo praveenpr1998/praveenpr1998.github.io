@@ -8,7 +8,6 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 import { NewsCards } from "./components/homepage/news";
-import dbConnect from "./lib/dbConnect";
 async function getData() {
   const res = await fetch(
     `https://v1.nocodeapi.com/${personalData.devUsername}`
@@ -38,7 +37,6 @@ async function getNews() {
 }
 
 export default async function Home() {
-  await dbConnect();
   const blogs = await getData();
   const news = await getNews();
   return (
