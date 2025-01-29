@@ -16,6 +16,6 @@ export const personalData = {
   leetcode: "https://leetcode.com/u/PraveenPr/",
   devUsername: "praveenraj/medium/YrnYazcNewotRgUU",
   resume:
-    "https://drive.google.com/file/d/1037xuLk26oe8QYRHzmQY_RtrZfi0PB1y/view",
+    "https://drive.google.com/file/d/1ECR2i0w4hxKHwkQOwOIK0vvYhAhmnya9/view",
   newsKeyVal: "0e4532808942411185656d3d5a35ae0a",
 };
