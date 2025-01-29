@@ -5,13 +5,11 @@ import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import ExperienceModel from "../../../models/experience";
 import experience from "/public/lottie/code.json";
 
 async function Experience() {
-  const experiences = await ExperienceModel.find();
-  const expList =
-    Array.isArray(experiences) && experiences.length ? experiences : EXP_MOCK;
+
+  const expList = EXP_MOCK;
   return (
     <div
       id="experience"
