@@ -2,14 +2,11 @@
 
 import { personalData } from "../../../../utils/data/personal-data";
 import Image from "next/image";
-import SummaryModel from "../../../models/summary";
 
 async function AboutSection() {
-  const summary = await SummaryModel.find();
+ 
   const summaryData =
-    Array.isArray(summary) && summary.length
-      ? summary[0].summary
-      : personalData.description;
+     personalData.description;
   return (
     <div id="about" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
