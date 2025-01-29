@@ -9,15 +9,11 @@ import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 import { FaMedium } from "react-icons/fa6";
-import ResumeModel from "../../../models/resume";
 import { Meteors } from "../ui/Meteors/index";
 import { TypewriterEffectSmooth } from "../ui/TypeWriterEffect/index";
 async function HeroSection() {
-  const resumeData = await ResumeModel.find();
-  const resumeLink =
-    Array.isArray(resumeData) && resumeData.length && resumeData[0].driveLink
-      ? resumeData[0].driveLink
-      : personalData.resume;
+
+  const resumeLink = personalData.resume;
 
   const words = [
     {
