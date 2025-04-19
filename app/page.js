@@ -37,7 +37,6 @@ async function getNews() {
 }
 
 export default async function Home() {
-  const blogs = await getData();
   const news = await getNews();
   return (
     <>
@@ -47,7 +46,6 @@ export default async function Home() {
       <Skills />
       <Projects />
       <Education />
-      <Blog blogs={blogs} />
       <NewsCards news={news} />
       <ContactSection />
     </>
