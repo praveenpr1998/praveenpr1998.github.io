@@ -9,7 +9,7 @@ const imageSrc = blog.imageLink
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group">
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         <Image
-          src={imageSrc}
+          src={"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*-FS4fVj3K1Igoop1A1Rstw.png"}
           height={1080}
           width={1920}
           alt=""
