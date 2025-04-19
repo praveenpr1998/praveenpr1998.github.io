@@ -3,7 +3,41 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import BlogCard from "./blog-card";
 
-function Blog({ blogs }) {
+
+
+
+function Blog() {
+  const blogs = [
+  {
+    title: "Optimizing Long Lists in React with Virtualization: A Practical Guide",
+    link: "https://medium.com/@praveenpr1998/optimizing-long-lists-in-react-with-virtualization-a-practical-guide-3d8f744f5370",
+    published: 1713523200000, // example timestamp (19 Apr 2025)
+    content: `<p>When rendering a list with 10,000+ items in React...</p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sample-image1.png" />`,
+    category: ["React", "Performance"]
+  },
+  {
+    title: "Multithreading in JavaScript: Harnessing the Power of Web Workers",
+    link: "https://medium.com/@praveenpr1998/multithreading-in-javascript-harnessing-the-power-of-web-workers-abc123def456",
+    published: 1720560000000, // example timestamp
+    content: `<p>JavaScript is inherently single-threaded...</p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sample-image2.png" />`,
+    category: ["JavaScript", "Web Workers"]
+  },
+  {
+    title: "Virtualized List in React Using Intersection Observer for Lazy Loading",
+    link: "https://medium.com/@praveenpr1998/virtualized-list-in-react-using-intersection-observer-for-lazy-loading-ghi789jkl012",
+    published: 1716940800000,
+    content: `<p>Efficient rendering of large lists...</p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sample-image3.png" />`,
+    category: ["React", "Lazy Loading"]
+  },
+  {
+    title: "Watching Object Changes in JavaScript with Proxies",
+    link: "https://medium.com/@praveenpr1998/watching-object-changes-in-javascript-with-proxies-mno345pqr678",
+    published: 1715731200000,
+    content: `<p>React has hooks, but what if you want to...</p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sample-image4.png" />`,
+    category: ["JavaScript", "Proxies"]
+  }
+];
+  
   return (
     <div
       id="blogs"
