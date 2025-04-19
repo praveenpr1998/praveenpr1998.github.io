@@ -46,6 +46,7 @@ export default async function Home() {
       <Skills />
       <Projects />
       <Education />
+     <Blog />
       <NewsCards news={news} />
       <ContactSection />
     </>
