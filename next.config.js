@@ -5,7 +5,7 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["cdn-images-1.medium.com"],
+  domains: ["cdn-images-1.medium.com", "miro.medium.com", "res.cloudinary.com", "media.dev.to"],
     remotePatterns: [
       {
         protocol: "https",
