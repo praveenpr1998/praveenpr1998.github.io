@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 function BlogCard({ blog }) {
-
+const imageSrc = blog.imageLink
   return (
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group">
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         <Image
-          src={blog.imageLink}
+          src={imageSrc}
           height={1080}
           width={1920}
           alt=""
