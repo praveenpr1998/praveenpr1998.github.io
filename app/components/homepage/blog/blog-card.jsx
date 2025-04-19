@@ -17,9 +17,6 @@ function BlogCard({ blog }) {
         />
       </div>
       <div className="p-2 sm:p-3 flex flex-col">
-        <div className="flex justify-between items-center text-[#16f2b3] text-sm">
-          <p>{timeConverter(blog.published)}</p>
-        </div>
         <Link target="_blank" href={blog.link}>
           <p className="my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500">
             {blog.title}
